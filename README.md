@@ -1,101 +1,49 @@
-# ⚡ Anshu Kumar Shah — Software Engineer & Systems Architect Portfolio
+# Anshu Kumar Shah — Systems & Frontend Software Engineer
 
-An ultra-modern, hyper-performant 3D developer portfolio engineered with **HTML5, CSS3, JavaScript (ES6+), and Three.js WebGL**.
+[![Live Demo](https://img.shields.io/badge/Live_Portfolio-06b6d4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://docodeanshu.github.io/Portfolio/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/gochampanshu/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/docodeanshu)
 
-Designed for high authority, showcasing low-latency systems intuition (OS, DBMS, Computer Networks), algorithmic problem solving (LeetCode & Data Structures), and modern spatial 3D UI.
-
----
-
-## 🌟 Key Features
-
-- **Interactive 3D WebGL Background**: Procedural particle galaxy constellation and rotating wireframe icosahedron built with Three.js, responding dynamically to mouse parallax and screen resize.
-- **Dynamic 3D Card Tilt**: Mouse-following physics perspective calculation (`perspective(1000px) rotateX(...) rotateY(...)`) across Bento grid items and project cards.
-- **Bento Grid Architecture Philosophy**: Showcasing Operating Systems, Low-level Concurrency, DBMS Internals, and 3D WebGL synthesis without any student/fresher framing.
-- **Interactive Terminal Console**: Embedded command line runtime supporting `help`, `whoami`, `skills`, `projects`, `dsa`, `hire`, `matrix`, `github`, and `clear`.
-- **LeetCode & Problem Solving Metrics**: Animated counting numbers highlighting algorithmic rigor and continuous optimization loops.
-- **Capability Matrix Filter**: Instant sorting of skills into Systems, Frontend/3D, Languages, and DevOps.
-- **One-Click Communication**: Instant email copy with toast alert, pre-formatted mailto dispatch, and direct links to GitHub, LinkedIn, LeetCode, and X.
-- **Zero-Dependency Core**: Pure vanilla web stack — runs immediately in any browser with zero build steps or `node_modules` installation.
+> High-throughput systems engineer and creative frontend architect bridging low-level computation (OS, DBMS, Data Structures & Algorithms) with real-time 3D WebGL user interfaces.
 
 ---
 
-## 🚀 How to Run Locally
+## ⚡ Overview
 
-### Option 1: Double-Click
-Simply double-click `index.html` in your file explorer to open it directly in your favorite browser (Chrome, Brave, Edge, Safari, Firefox).
+This repository houses the source code for my personal digital workstation and engineering showcase. Designed from scratch with performance, sub-millisecond responsiveness, and modern 3D spatial aesthetics in mind.
 
-### Option 2: Local Server (Python / Node / VS Code Live Server)
-In this directory, you can run:
-
-```bash
-# Using Python 3
-python3 -m http.server 8000
-
-# Or using npx serve
-npx serve .
-```
-Then visit `http://localhost:8000`.
+- **Live URL:** [docodeanshu.github.io/Portfolio](https://docodeanshu.github.io/Portfolio/)
+- **Core Philosophy:** Low-latency execution, zero unnecessary abstractions, and mathematical algorithmic rigor.
 
 ---
 
-## 🌐 How to Host Online (Free & Fast)
+## 🛠️ Technical Stack
 
-### Method 1: GitHub Pages (Recommended — Takes 2 Minutes)
-Since you already have a GitHub account (`https://github.com/docodeanshu`):
-
-1. **Create a new repository** on GitHub:
-   - Go to [github.com/new](https://github.com/new).
-   - Name it `portfolio` (or `docodeanshu.github.io` if you want it to live directly on your root personal domain!).
-   - Set it to **Public**.
-2. **Push this code to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial commit of modern 3D portfolio"
-   git branch -M main
-   git remote add origin https://github.com/docodeanshu/<YOUR-REPO-NAME>.git
-   git push -u origin main
-   ```
-3. **Enable GitHub Pages**:
-   - In your repository, click **Settings** &rarr; **Pages** (on the left sidebar).
-   - Under **Build and deployment** &rarr; **Branch**, select `main` and root `/`, then click **Save**.
-   - In 60 seconds, your site is live at:
-     `https://docodeanshu.github.io/<YOUR-REPO-NAME>/` (or `https://docodeanshu.github.io/`).
+- **Languages:** C++, Java, Python, JavaScript (ES6+), SQL, Bash
+- **Core Computer Science:** Operating Systems (Scheduling, Paging, Concurrency), Database Management Systems (ACID, B+ Tree Indexing), Computer Networks (TCP/IP, HTTP/3), Data Structures & Algorithms
+- **Presentation & 3D:** Three.js, WebGL Shader Math, HTML5 Canvas, Modern CSS3 Architecture (Grid, Flexbox, Custom Properties)
+- **Tooling & Environment:** Git, Linux / Unix CLI, Chrome DevTools, Vite, Postman
 
 ---
 
-### Method 2: Vercel (1-Click Deployment)
-1. Go to [vercel.com](https://vercel.com) and log in with your GitHub account.
-2. Click **Add New Project** and import your portfolio repository.
-3. Leave all settings at default (Framework: Other) and click **Deploy**.
-4. You will instantly get a custom production URL (e.g. `anshu-portfolio.vercel.app`) with automatic SSL and global CDN distribution.
+## 🏛️ Engineering & Architecture Highlights
+
+- **Spatial WebGL Canvas:** Interactive procedural 3D particle constellation and rotating wireframe icosahedron operating on hardware-accelerated render loops.
+- **Physics Perspective System:** Mouse coordinate-based 3D transform calculations across cards and interactive bento elements.
+- **Embedded Terminal Runtime:** Client-side command line emulator (`whoami`, `skills`, `projects`, `dsa`, `hire`, `matrix`) simulating a Unix zsh session.
+- **Zero-Dependency Architecture:** Pure, self-contained web fundamentals without heavy framework overhead, delivering instantaneous first-contentful paint (FCP) and steady 60 FPS transitions.
 
 ---
 
-### Method 3: Netlify (Drag & Drop)
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Drag and drop this entire `Portfolio` folder directly onto the page.
-3. Your site is live in under 5 seconds!
+## 📬 Contact & Coordinates
+
+- **Email:** [theanshushah@gmail.com](mailto:theanshushah@gmail.com)
+- **LinkedIn:** [Anshu Kumar Shah](https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/)
+- **LeetCode:** [gochampanshu](https://leetcode.com/u/gochampanshu/)
+- **X / Twitter:** [@theanshushah](https://x.com/theanshushah)
+- **Location:** Coimbatore, Tamil Nadu, India (Open to Remote & Global Relocation)
 
 ---
 
-## 🛠 Project Structure
-
-```
-Portfolio/
-├── index.html       # Semantic HTML5, SEO OpenGraph, Accessible DOM
-├── style.css        # Modern CSS custom properties, Glassmorphism, 3D Transforms
-├── script.js       # Three.js 3D canvas, interactive terminal, custom cursor, tilt
-└── README.md        # Documentation and hosting guide
-```
-
----
-
-## 👤 Author Coordinates
-- **Name**: Anshu Kumar Shah
-- **GitHub**: [@docodeanshu](https://github.com/docodeanshu)
-- **LinkedIn**: [Anshu Kumar Shah](https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/)
-- **LeetCode**: [gochampanshu](https://leetcode.com/u/gochampanshu/)
-- **X / Twitter**: [@theanshushah](https://x.com/theanshushah)
-- **Email**: `theanshushah@gmail.com`
-- **Location**: Coimbatore, Tamil Nadu, India
+&copy; Anshu Kumar Shah. Handcrafted with performance in mind.
