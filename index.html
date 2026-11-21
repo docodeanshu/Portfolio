@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshu Kumar Shah — Software Engineer & Systems Architect</title>
+    <meta name="description" content="Portfolio of Anshu Kumar Shah: High-performance Software Engineer, Systems Specialist, and Creative Frontend Architect.">
+    <meta name="keywords" content="Anshu Kumar Shah, Software Engineer, Frontend Developer, Systems Architecture, DSA, LeetCode, Three.js, WebGL">
+    <meta name="author" content="Anshu Kumar Shah">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anshu Kumar Shah — Systems & Frontend Engineer">
+    <meta property="og:description" content="Engineering resilient low-latency systems and hyper-modern 3D visual experiences.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide Icons CDN & FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-slate selection-cyan">
+
+    <!-- Ambient Glowing Background Canvas for Three.js -->
+    <div id="webgl-container" class="webgl-canvas-wrapper" aria-hidden="true"></div>
+
+    <!-- Custom Glowing Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-outline" id="cursor-outline"></div>
+
+    <!-- Background Noise & Ambient Glow Gradients -->
+    <div class="ambient-glow glow-top" aria-hidden="true"></div>
+    <div class="ambient-glow glow-middle" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar glass-card">
+            <a href="#hero" class="nav-logo group">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Anshu</span>
+                <span class="logo-accent">.dev</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link"><span>01.</span> Philosophy</a></li>
+                <li><a href="#arsenal" class="nav-link"><span>02.</span> Arsenal</a></li>
+                <li><a href="#projects" class="nav-link"><span>03.</span> Architecture</a></li>
+                <li><a href="#terminal" class="nav-link"><span>04.</span> Console</a></li>
+                <li><a href="#contact" class="nav-link"><span>05.</span> Dispatch</a></li>
+            </ul>
+
+            <!-- Status Indicator & CTA -->
+            <div class="nav-actions">
+                <div class="status-badge" title="Actively reviewing high-impact engineering opportunities">
+                    <span class="status-pulse"></span>
+                    <span class="status-text">Available For Hire</span>
+                </div>
+                <a href="#contact" class="btn btn-sm btn-primary">Connect</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="mobile-menu glass-card" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#about" class="mobile-nav-link"><span>01.</span> Philosophy</a></li>
+                <li><a href="#arsenal" class="mobile-nav-link"><span>02.</span> Arsenal</a></li>
+                <li><a href="#projects" class="mobile-nav-link"><span>03.</span> Architecture</a></li>
+                <li><a href="#terminal" class="mobile-nav-link"><span>04.</span> Console</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><span>05.</span> Dispatch</a></li>
+            </ul>
+            <div class="mobile-socials">
+                <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://leetcode.com/u/gochampanshu/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+                <a href="https://x.com/theanshushah" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    
+                    <div class="hero-pill glass-card animate-fade-in">
+                        <span class="pill-dot"></span>
+                        <span class="pill-text">Systems Engineer &bull; Frontend Architect &bull; Algorithmic Thinker</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Building <span class="gradient-text">High-Throughput</span> Architectures &amp; <span class="gradient-text-alt">Immersive 3D</span> Realities.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        I am <strong class="text-white">Anshu Kumar Shah</strong>, a Software Engineer operating at the intersection of low-level systems efficiency and cinematic digital experiences. Master of core computational theory, algorithmic optimization, and modern interactive WebGL frontends.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary btn-glow">
+                            <span>Explore Engineering</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                        <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="btn btn-secondary glass-card">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Repos</span>
+                        </a>
+                        <a href="https://leetcode.com/u/gochampanshu/" target="_blank" rel="noopener" class="btn btn-secondary glass-card">
+                            <i class="fa-solid fa-code text-cyan"></i>
+                            <span>LeetCode Mastery</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Strip -->
+                    <div class="hero-social-strip">
+                        <span class="social-label">SECURE_LINK //</span>
+                        <div class="social-icons">
+                            <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" title="GitHub (@docodeanshu)" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/" target="_blank" rel="noopener" title="LinkedIn Profile" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://leetcode.com/u/gochampanshu/" target="_blank" rel="noopener" title="LeetCode Profile" class="social-icon-btn"><i class="fa-solid fa-terminal"></i></a>
+                            <a href="https://x.com/theanshushah" target="_blank" rel="noopener" title="X / Twitter (@theanshushah)" class="social-icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="mailto:theanshushah@gmail.com" title="Direct Mail" class="social-icon-btn"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3D Interactive Hero Card / Graphic Visualizer -->
+                <div class="hero-visual">
+                    <div class="visual-card-3d glass-card" id="hero-3d-card">
+                        <div class="card-glass-specular"></div>
+                        
+                        <div class="card-header-bar">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">anshu_kernel_v3.8.sh</span>
+                            <span class="badge-live">LIVE</span>
+                        </div>
+
+                        <div class="card-body-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">PARADIGM</div>
+                                <div class="metric-val text-cyan">Low-Latency / Full-Stack</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">CORE CS DISCIPLINE</div>
+                                <div class="metric-val text-purple">OS &bull; DBMS &bull; Networks</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">DSA VELOCITY</div>
+                                <div class="metric-val text-white"><span class="counter" data-target="33">0</span>+ Solved &bull; Algorithmic Depth</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">FRAME RATE TARGET</div>
+                                <div class="metric-val text-emerald">60.0 FPS &bull; WebGL / GPU</div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Code Visualizer -->
+                        <div class="card-code-preview">
+<pre><code><span class="token-kw">struct</span> <span class="token-type">Engineer</span> {
+    <span class="token-type">string</span> name = <span class="token-str">"Anshu Kumar Shah"</span>;
+    <span class="token-type">string</span> focus = <span class="token-str">"Systems &amp; Immersive UI"</span>;
+    <span class="token-type">bool</span> solvesComplexity = <span class="token-bool">true</span>;
+    <span class="token-type">double</span> latency = <span class="token-num">0.001</span>; <span class="token-comment">// sub-ms</span>
+};</code></pre>
+                        </div>
+
+                        <div class="card-footer-stats">
+                            <div class="stat-bubble">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Coimbatore, India (Open to Worldwide)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-ribbon glass-card">
+                <div class="container stats-container">
+                    <div class="stat-col">
+                        <span class="stat-number"><span class="counter" data-target="33">0</span>+</span>
+                        <span class="stat-caption">LeetCode Problem Rigor</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col">
+                        <span class="stat-number">O(1)</span>
+                        <span class="stat-caption">Optimization Mindset</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-caption">CS Core Fundamentals</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col">
+                        <span class="stat-number">60 FPS</span>
+                        <span class="stat-caption">Hardware-Accelerated UI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PHILOSOPHY / ABOUT SECTION ================= -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><span>01 // ARCHITECTURAL DNA</span></div>
+                    <h2 class="section-title">Engineered For <span class="gradient-text">Extreme Scale</span> &amp; Elegance</h2>
+                    <p class="section-desc">
+                        I reject cookie-cutter templates and sluggish abstractions. My craft is built upon the foundational pillars of Computer Science: process scheduling, memory boundaries, computational complexity, and hardware-accelerated presentation layers.
+                    </p>
+                </div>
+
+                <!-- Bento Grid -->
+                <div class="bento-grid">
+                    
+                    <!-- Bento Box 1: Core Systems -->
+                    <div class="bento-card bento-wide glass-card tilt-card">
+                        <div class="bento-glow"></div>
+                        <div class="bento-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="bento-title">Operating Systems &amp; Low-Level Concurrency</h3>
+                        <p class="bento-text">
+                            Deep intuition for process lifecycle, preemptive scheduling algorithms, IPC (Inter-Process Communication), virtual memory segmentation, and lock-free thread synchronization. I design software with cache locality and hardware sympathy in mind.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">Process Scheduling</span>
+                            <span class="tag">Virtual Memory</span>
+                            <span class="tag">Concurrency</span>
+                            <span class="tag">Deadlock Avoidance</span>
+                        </div>
+                    </div>
+
+                    <!-- Bento Box 2: Algorithmic Rigor -->
+                    <div class="bento-card glass-card tilt-card">
+                        <div class="bento-glow"></div>
+                        <div class="bento-icon text-cyan"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="bento-title">Data Structures &amp; Complexity Analysis</h3>
+                        <p class="bento-text">
+                            Trained in algorithmic problem solving with continuous LeetCode streaks. From Dynamic Programming state transitions to Graph Traversal (DFS/BFS/Dijkstra) and Tree Balancing.
+                        </p>
+                        <div class="bento-metric">
+                            <span class="bento-metric-val">33+</span>
+                            <span class="bento-metric-sub">Problems Mastered &amp; Expanding</span>
+                        </div>
+                    </div>
+
+                    <!-- Bento Box 3: Database Internals -->
+                    <div class="bento-card glass-card tilt-card">
+                        <div class="bento-glow"></div>
+                        <div class="bento-icon text-purple"><i class="fa-solid fa-database"></i></div>
+                        <h3 class="bento-title">DBMS &amp; High-Reliability Storage</h3>
+                        <p class="bento-text">
+                            Architecting schemas governed by strict relational algebra, ACID guarantees, B+ Tree indexing mechanisms, and optimized execution plans that eliminate full table scans.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">B+ Trees</span>
+                            <span class="tag">ACID Transactions</span>
+                            <span class="tag">Indexing</span>
+                            <span class="tag">Normalization</span>
+                        </div>
+                    </div>
+
+                    <!-- Bento Box 4: 3D WebGL & Modern Frontend -->
+                    <div class="bento-card bento-wide glass-card tilt-card">
+                        <div class="bento-glow"></div>
+                        <div class="bento-icon text-emerald"><i class="fa-solid fa-cubes"></i></div>
+                        <h3 class="bento-title">3D Spatial Frontend &amp; WebGL Synthesis</h3>
+                        <p class="bento-text">
+                            Crafting spatial digital experiences using Three.js, Canvas, and high-performance modern CSS. Combining sub-pixel smoothness, procedural particle systems, and responsive design systems that captivate users across every device.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">GLSL Concepts</span>
+                            <span class="tag">Modern ESNext</span>
+                            <span class="tag">Fluid CSS Architecture</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= TECHNICAL ARSENAL SECTION ================= -->
+        <section id="arsenal" class="section-padding section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><span>02 // CAPABILITY MATRIX</span></div>
+                    <h2 class="section-title">The <span class="gradient-text">Technical Arsenal</span></h2>
+                    <p class="section-desc">
+                        A rigorous blend of programming languages, foundational computer science disciplines, modern frontend architectures, and deployment pipelines.
+                    </p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="arsenal-tabs">
+                    <button class="arsenal-tab-btn active" data-filter="all">All Disciplines</button>
+                    <button class="arsenal-tab-btn" data-filter="systems">Core CS &amp; Systems</button>
+                    <button class="arsenal-tab-btn" data-filter="frontend">Frontend &amp; 3D</button>
+                    <button class="arsenal-tab-btn" data-filter="languages">Languages &amp; DB</button>
+                    <button class="arsenal-tab-btn" data-filter="tools">DevOps &amp; Tools</button>
+                </div>
+
+                <!-- Arsenal Grid -->
+                <div class="arsenal-grid" id="arsenal-grid">
+                    
+                    <!-- Item: C++ -->
+                    <div class="skill-card glass-card tilt-card" data-category="languages">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-code text-cyan skill-icon"></i>
+                            <span class="skill-level">Low-Level Mastery</span>
+                        </div>
+                        <h4 class="skill-name">C++ / C</h4>
+                        <p class="skill-desc">Memory pointers, STL containers, deterministic destruction, high-throughput algorithmic pipelines.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <!-- Item: Java -->
+                    <div class="skill-card glass-card tilt-card" data-category="languages">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-java text-orange skill-icon"></i>
+                            <span class="skill-level">Enterprise Core</span>
+                        </div>
+                        <h4 class="skill-name">Java</h4>
+                        <p class="skill-desc">Object-Oriented Design, JVM memory architecture, multithreading, robust collection frameworks.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 88%;"></div></div>
+                    </div>
+
+                    <!-- Item: Python -->
+                    <div class="skill-card glass-card tilt-card" data-category="languages">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-python text-yellow skill-icon"></i>
+                            <span class="skill-level">Rapid Computation</span>
+                        </div>
+                        <h4 class="skill-name">Python</h4>
+                        <p class="skill-desc">Scripting, algorithmic prototyping, data structures manipulation, automated testing routines.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 85%;"></div></div>
+                    </div>
+
+                    <!-- Item: Modern JavaScript / ESNext -->
+                    <div class="skill-card glass-card tilt-card" data-category="frontend languages">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-js text-yellow skill-icon"></i>
+                            <span class="skill-level">Advanced ESNext</span>
+                        </div>
+                        <h4 class="skill-name">JavaScript (ES6+)</h4>
+                        <p class="skill-desc">Event loop mechanics, async/await, closures, prototypical inheritance, microtask queues, DOM mastery.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 95%;"></div></div>
+                    </div>
+
+                    <!-- Item: Operating Systems -->
+                    <div class="skill-card glass-card tilt-card" data-category="systems">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-server text-purple skill-icon"></i>
+                            <span class="skill-level">Core Theory</span>
+                        </div>
+                        <h4 class="skill-name">Operating Systems (OS)</h4>
+                        <p class="skill-desc">Processes vs. Threads, CPU Scheduling (Round Robin, SRTF), Virtual Memory, Paging, Semaphores &amp; Mutexes.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 92%;"></div></div>
+                    </div>
+
+                    <!-- Item: DBMS & SQL -->
+                    <div class="skill-card glass-card tilt-card" data-category="systems languages">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-database text-cyan skill-icon"></i>
+                            <span class="skill-level">Data Integrity</span>
+                        </div>
+                        <h4 class="skill-name">DBMS &amp; SQL</h4>
+                        <p class="skill-desc">Relational schema design, ACID compliance, query execution plans, primary/foreign indexing, Normalization (1NF-BCNF).</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <!-- Item: Data Structures & Algorithms -->
+                    <div class="skill-card glass-card tilt-card" data-category="systems">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-network-wired text-emerald skill-icon"></i>
+                            <span class="skill-level">Algorithmic</span>
+                        </div>
+                        <h4 class="skill-name">DSA &amp; Optimization</h4>
+                        <p class="skill-desc">Trees, Graphs, Hash Tables, Segment Trees, Dynamic Programming, Two Pointers, Binary Search, Big-O Optimization.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 94%;"></div></div>
+                    </div>
+
+                    <!-- Item: Computer Networks -->
+                    <div class="skill-card glass-card tilt-card" data-category="systems">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-globe text-cyan skill-icon"></i>
+                            <span class="skill-level">Infrastructure</span>
+                        </div>
+                        <h4 class="skill-name">Computer Networks</h4>
+                        <p class="skill-desc">OSI 7-Layer model, TCP 3-Way Handshake, UDP, DNS resolution, HTTP/1.1 vs HTTP/2/3, WebSockets.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 88%;"></div></div>
+                    </div>
+
+                    <!-- Item: Three.js & WebGL 3D -->
+                    <div class="skill-card glass-card tilt-card" data-category="frontend">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-cube text-purple skill-icon"></i>
+                            <span class="skill-level">3D Spatial</span>
+                        </div>
+                        <h4 class="skill-name">Three.js &amp; Canvas WebGL</h4>
+                        <p class="skill-desc">Interactive 3D scenes, custom geometries, particle systems, camera projections, lighting, shaders.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <!-- Item: HTML5 & Modern CSS3 -->
+                    <div class="skill-card glass-card tilt-card" data-category="frontend">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-html5 text-orange skill-icon"></i>
+                            <span class="skill-level">Pixel Precision</span>
+                        </div>
+                        <h4 class="skill-name">HTML5 &amp; Modern CSS3</h4>
+                        <p class="skill-desc">Semantic DOM, CSS Grid, Flexbox, Custom Properties, Glassmorphism, 3D CSS Transforms, Keyframe Animations.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 96%;"></div></div>
+                    </div>
+
+                    <!-- Item: Git & Version Control -->
+                    <div class="skill-card glass-card tilt-card" data-category="tools">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-git-alt text-red skill-icon"></i>
+                            <span class="skill-level">Workflow</span>
+                        </div>
+                        <h4 class="skill-name">Git &amp; Distributed VCS</h4>
+                        <p class="skill-desc">Branching models, rebasing, merge conflict resolution, pull request reviews, commit atomic integrity.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 92%;"></div></div>
+                    </div>
+
+                    <!-- Item: Linux & Unix CLI -->
+                    <div class="skill-card glass-card tilt-card" data-category="tools systems">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-linux text-white skill-icon"></i>
+                            <span class="skill-level">Terminal Native</span>
+                        </div>
+                        <h4 class="skill-name">Linux &amp; Shell Scripting</h4>
+                        <p class="skill-desc">Bash scripting, file permissions, pipe chaining (grep, awk, sed), system monitoring (top, htop), SSH keys.</p>
+                        <div class="skill-meter"><div class="meter-fill" style="width: 88%;"></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PROJECTS SHOWCASE SECTION ================= -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><span>03 // FEATURED ARCHITECTURES</span></div>
+                    <h2 class="section-title">Engineered <span class="gradient-text">Systems &amp; Applications</span></h2>
+                    <p class="section-desc">
+                        A curation of enterprise-grade prototypes, systems simulations, and interactive 3D web engines that demonstrate engineering excellence.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1: NexusOS Virtual Kernel Simulator -->
+                    <article class="project-card glass-card tilt-card group">
+                        <div class="project-header">
+                            <div class="project-badge">SYSTEMS &bull; OS ARCHITECTURE</div>
+                            <div class="project-links">
+                                <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="icon-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+                                <button class="icon-link project-preview-trigger" data-project="nexus" title="View System Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">NexusOS: Web-Based Kernel &amp; CPU Scheduler</h3>
+                            <p class="project-summary">
+                                An interactive Operating System simulation engine running right in the browser. Implements real-time visualization of Round-Robin, Shortest Job First (SJR), and Priority Scheduling, complete with simulated memory paging, virtual address mapping, and thrashing prevention.
+                            </p>
+
+                            <div class="project-metrics-box">
+                                <div class="p-metric">
+                                    <span class="p-metric-val">&lt; 1ms</span>
+                                    <span class="p-metric-lbl">Context Switch Latency</span>
+                                </div>
+                                <div class="p-metric">
+                                    <span class="p-metric-val">4</span>
+                                    <span class="p-metric-lbl">Scheduling Algorithms</span>
+                                </div>
+                            </div>
+
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check text-cyan"></i> Gantt chart generator with real-time turn-around time calculations.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> Paged memory allocation simulation with LRU/FIFO page replacement.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">JavaScript ESNext</span>
+                                <span class="tech-tag">OS Theory</span>
+                                <span class="tech-tag">HTML5 Canvas</span>
+                                <span class="tech-tag">CSS Glassmorphism</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: AlgoPulse Graph & DSA Engine -->
+                    <article class="project-card glass-card tilt-card group">
+                        <div class="project-header">
+                            <div class="project-badge">ALGORITHMS &bull; VISUAL COMPUTING</div>
+                            <div class="project-links">
+                                <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="icon-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+                                <button class="icon-link project-preview-trigger" data-project="algopulse" title="View System Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">AlgoPulse: High-Performance Graph &amp; DSA Engine</h3>
+                            <p class="project-summary">
+                                Dynamic algorithmic profiler capable of step-by-step state visualization for complex graph algorithms including Dijkstra's Shortest Path, A* Heuristic Search, Topological Sorting, and Tarjan's Strongly Connected Components.
+                            </p>
+
+                            <div class="project-metrics-box">
+                                <div class="p-metric">
+                                    <span class="p-metric-val">O(V + E)</span>
+                                    <span class="p-metric-lbl">Optimized Graph Traversal</span>
+                                </div>
+                                <div class="p-metric">
+                                    <span class="p-metric-val">60 FPS</span>
+                                    <span class="p-metric-lbl">Canvas Interpolation</span>
+                                </div>
+                            </div>
+
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check text-cyan"></i> Interactive custom graph node creator with weighted directional edges.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> Real-time call stack and recursion tree visualizer for DP memoization.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">DSA Optimization</span>
+                                <span class="tech-tag">Graph Theory</span>
+                                <span class="tech-tag">Modern JavaScript</span>
+                                <span class="tech-tag">SVG / Canvas</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: HyperStore In-Memory DBMS Engine -->
+                    <article class="project-card glass-card tilt-card group">
+                        <div class="project-header">
+                            <div class="project-badge">STORAGE &bull; DATABASE INTERNALS</div>
+                            <div class="project-links">
+                                <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="icon-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+                                <button class="icon-link project-preview-trigger" data-project="hyperstore" title="View System Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">HyperStore: Lightweight B+ Tree Database Engine</h3>
+                            <p class="project-summary">
+                                A high-efficiency relational query simulation built to replicate database internals. Demonstrates how disk-oriented B+ Trees index multi-attribute tables, executing parsed SQL queries with simulated Write-Ahead Logging (WAL) and strict ACID transactional rollback.
+                            </p>
+
+                            <div class="project-metrics-box">
+                                <div class="p-metric">
+                                    <span class="p-metric-val">O(log N)</span>
+                                    <span class="p-metric-lbl">B+ Tree Lookups</span>
+                                </div>
+                                <div class="p-metric">
+                                    <span class="p-metric-val">ACID</span>
+                                    <span class="p-metric-lbl">Guaranteed Atomicity</span>
+                                </div>
+                            </div>
+
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check text-cyan"></i> Lexer and parser for subsets of SQL: SELECT, INSERT, WHERE, JOIN.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> Visual B+ Tree node splitting and re-balancing animation on high insert load.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">DBMS Internals</span>
+                                <span class="tech-tag">B+ Tree Indexing</span>
+                                <span class="tech-tag">SQL Parser</span>
+                                <span class="tech-tag">JavaScript / Data Structures</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Aether 3D Spatial Canvas Studio -->
+                    <article class="project-card glass-card tilt-card group">
+                        <div class="project-header">
+                            <div class="project-badge">GRAPHICS &bull; THREE.JS &bull; WEBGL</div>
+                            <div class="project-links">
+                                <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="icon-link" title="Source Code"><i class="fa-brands fa-github"></i></a>
+                                <button class="icon-link project-preview-trigger" data-project="aether" title="View System Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Aether 3D: Real-Time Spatial WebGL Experience</h3>
+                            <p class="project-summary">
+                                An immersive 3D creative web environment engineered with Three.js and custom GLSL vertex shader computations. Leverages mathematical procedural wave formulas, particle physics simulations, and dynamic raycasting for high-fidelity spatial interaction.
+                            </p>
+
+                            <div class="project-metrics-box">
+                                <div class="p-metric">
+                                    <span class="p-metric-val">10,000+</span>
+                                    <span class="p-metric-lbl">Simulated 3D Particles</span>
+                                </div>
+                                <div class="p-metric">
+                                    <span class="p-metric-val">0ms</span>
+                                    <span class="p-metric-lbl">Main-Thread Jitter</span>
+                                </div>
+                            </div>
+
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-check text-cyan"></i> Dynamic mouse gravity-well interaction on floating node topologies.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> Fully responsive WebGL viewport scaling with zero aspect ratio distortion.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">WebGL</span>
+                                <span class="tech-tag">Shader Math</span>
+                                <span class="tech-tag">Hardware Accelerated</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= INTERACTIVE TERMINAL SECTION ================= -->
+        <section id="terminal" class="section-padding section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><span>04 // SECURE RUNTIME</span></div>
+                    <h2 class="section-title">Interactive <span class="gradient-text">Engineering Console</span></h2>
+                    <p class="section-desc">
+                        Interact directly with the system. Type commands like <code class="code-pill">help</code>, <code class="code-pill">whoami</code>, <code class="code-pill">skills</code>, <code class="code-pill">projects</code>, <code class="code-pill">dsa</code>, or <code class="code-pill">hire</code>.
+                    </p>
+                </div>
+
+                <div class="terminal-wrapper glass-card">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-identity">
+                            <i class="fa-solid fa-terminal text-cyan"></i>
+                            <span>guest@anshu-workstation:~ (zsh)</span>
+                        </div>
+                        <div class="terminal-actions">
+                            <button id="terminal-clear-btn" class="terminal-btn" title="Clear Console">clear</button>
+                        </div>
+                    </div>
+
+                    <div class="terminal-screen" id="terminal-screen">
+                        <div class="terminal-output" id="terminal-output">
+                            <div class="terminal-line"><span class="text-emerald">✔ System online:</span> Anshu Kumar Shah OS Environment [Version 3.8.2-x86_64]</div>
+                            <div class="terminal-line">Type <span class="text-cyan font-bold">help</span> to list available commands or click quick-prompt buttons below.</div>
+                        </div>
+
+                        <!-- Terminal Command Input Line -->
+                        <div class="terminal-input-row">
+                            <span class="terminal-prompt">anshu@root:~$</span>
+                            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+                        </div>
+                    </div>
+
+                    <!-- Quick Command Badges -->
+                    <div class="terminal-quick-prompts">
+                        <span class="quick-title">Quick execute:</span>
+                        <button class="quick-btn" data-cmd="help">help</button>
+                        <button class="quick-btn" data-cmd="whoami">whoami</button>
+                        <button class="quick-btn" data-cmd="skills">skills</button>
+                        <button class="quick-btn" data-cmd="projects">projects</button>
+                        <button class="quick-btn" data-cmd="dsa">dsa</button>
+                        <button class="quick-btn" data-cmd="hire">hire</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT & DISPATCH SECTION ================= -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><span>05 // INITIATE TRANSMISSION</span></div>
+                    <h2 class="section-title">Let's Build Something <span class="gradient-text">Legendary</span></h2>
+                    <p class="section-desc">
+                        Whether you are assembling a world-class engineering team, need an algorithmic powerhouse, or want an unforgettable 3D web experience, my inbox is open.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <!-- Direct Coordinates Card -->
+                    <div class="contact-info-card glass-card tilt-card">
+                        <h3 class="contact-card-title">Direct Coordinates</h3>
+                        <p class="contact-card-text">
+                            Available for high-impact Software Engineering roles, Systems Engineering, and Next-Gen Frontend positions. Based in Coimbatore, Tamil Nadu, India — fully equipped for high-tempo global remote engineering.
+                        </p>
+
+                        <div class="contact-methods">
+                            
+                            <!-- Email Item with Copy Button -->
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="method-details">
+                                    <span class="method-label">ELECTRONIC MAIL</span>
+                                    <div class="method-value-row">
+                                        <a href="mailto:theanshushah@gmail.com" class="method-value">theanshushah@gmail.com</a>
+                                        <button class="copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy Email">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Location Item -->
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+                                <div class="method-details">
+                                    <span class="method-label">HEADQUARTERS</span>
+                                    <span class="method-value">Coimbatore, Tamil Nadu, India</span>
+                                </div>
+                            </div>
+
+                            <!-- LeetCode Status -->
+                            <div class="contact-method-item">
+                                <div class="method-icon text-cyan"><i class="fa-solid fa-code"></i></div>
+                                <div class="method-details">
+                                    <span class="method-label">LEETCODE DISCIPLINE</span>
+                                    <a href="https://leetcode.com/u/gochampanshu/" target="_blank" rel="noopener" class="method-value">
+                                        leetcode.com/u/gochampanshu <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub Status -->
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="method-details">
+                                    <span class="method-label">CODE REPOSITORY</span>
+                                    <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="method-value">
+                                        github.com/docodeanshu <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Social Buttons Strip -->
+                        <div class="contact-social-row">
+                            <a href="https://www.linkedin.com/in/anshu-kumar-shah-6ba928410/" target="_blank" rel="noopener" class="social-pill glass-card">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://x.com/theanshushah" target="_blank" rel="noopener" class="social-pill glass-card">
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <span>X / Twitter</span>
+                            </a>
+                            <a href="https://github.com/docodeanshu" target="_blank" rel="noopener" class="social-pill glass-card">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Message Dispatch Form -->
+                    <div class="contact-form-card glass-card">
+                        <div class="card-glass-specular"></div>
+                        <h3 class="contact-card-title">Send Secure Transmission</h3>
+                        
+                        <form id="contact-form" class="dispatch-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sender-name">Your Identity / Organization</label>
+                                    <input type="text" id="sender-name" name="name" required placeholder="e.g. Satya Nadella / Google Engineering" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sender-email">Reply Coordinates (Email)</label>
+                                    <input type="email" id="sender-email" name="email" required placeholder="your.name@company.com" class="form-input">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-subject">Subject</label>
+                                <input type="text" id="message-subject" name="subject" required placeholder="Engineering Role / Project Collaboration / Tech Discussion" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-message">Transmission Content</label>
+                                <textarea id="sender-message" name="message" rows="5" required placeholder="Describe your mission, requirements, or opportunity..." class="form-input"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-glow" id="submit-btn">
+                                <span>Dispatch Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <p class="form-notice">
+                                <i class="fa-solid fa-shield-halved text-cyan"></i> Automatically encrypted &amp; dispatched straight to <strong class="text-white">theanshushah@gmail.com</strong>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Anshu Kumar Shah</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-tagline">Architecting low-latency systems &amp; fluid spatial interfaces.</p>
+            </div>
+
+            <div class="footer-center">
+                <span class="system-status">
+                    <span class="status-pulse-small"></span>
+                    ALL SYSTEMS NOMINAL &bull; 60 FPS
+                </span>
+            </div>
+
+            <div class="footer-right">
+                <p class="footer-copy">&copy; <span id="current-year"></span> Anshu Kumar Shah. Handcrafted with HTML, CSS, JS &amp; Three.js.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Element -->
+    <div id="toast" class="toast-notification" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-check text-cyan"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Project Details Modal / Drawer -->
+    <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-dialog glass-card">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close details">&times;</button>
+            <div id="modal-content-target">
+                <!-- Dynamically injected via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js (r128 CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
