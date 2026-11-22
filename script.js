@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTiltCards();
     initScrollCounters();
     initArsenalTabs();
+    initMilestonesTabs();
     initTerminal();
     initClipboardCopy();
     initProjectModals();
@@ -292,6 +293,40 @@ function initArsenalTabs() {
 }
 
 /* ===================================================================
+   5b. MILESTONES & HACKATHONS FILTER TABS
+   =================================================================== */
+function initMilestonesTabs() {
+    const tabs = document.querySelectorAll('.milestone-filter-btn');
+    const cards = document.querySelectorAll('.milestone-card');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const filter = tab.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 250);
+                }
+            });
+        });
+    });
+}
+
+/* ===================================================================
    6. INTERACTIVE TERMINAL EMULATOR
    =================================================================== */
 function initTerminal() {
@@ -312,6 +347,8 @@ function initTerminal() {
   • <span class="text-white font-bold">whoami</span>       : Executive summary of Anshu Kumar Shah
   • <span class="text-white font-bold">skills</span>       : Full technical stack &amp; capabilities
   • <span class="text-white font-bold">projects</span>     : Flagship architectures &amp; source links
+  • <span class="text-white font-bold">hackathons</span>   : Hackathon participation &amp; product sprints
+  • <span class="text-white font-bold">milestones</span>   : Key achievements &amp; technical breakthroughs
   • <span class="text-white font-bold">dsa</span>          : Algorithmic problem solving &amp; LeetCode stats
   • <span class="text-white font-bold">hire</span>         : Direct coordinate transmission &amp; availability
   • <span class="text-white font-bold">github</span>       : Direct link to GitHub (@docodeanshu)
@@ -341,6 +378,19 @@ Status      : <span class="text-cyan font-bold">Available for High-Impact Roles<
   3. <strong class="text-cyan">HyperStore</strong>    : In-browser B+ Tree relational database engine
   4. <strong class="text-cyan">Aether 3D</strong>     : Procedural WebGL shader particle ecosystem
 Type <span class="text-yellow">cat &lt;project-name&gt;</span> or click cards in Section 03 for system diagrams.
+        `,
+        hackathons: `
+<span class="text-yellow font-bold">[HACKATHON EXPEDITIONS]</span>
+  • <strong class="text-white">SELFI Hackathon Sprint:</strong> Autonomous rapid product prototype shipped under intense countdown.
+  • <strong class="text-white">Upcoming Expeditions:</strong> Slot open for upcoming national and global hackathons.
+Type <span class="text-cyan">milestones</span> for algorithmic and systems breakthroughs.
+        `,
+        milestones: `
+<span class="text-yellow font-bold">[EXPEDITIONS &amp; RECOGNITION]</span>
+  1. <strong class="text-yellow">SELFI Hackathon Sprint</strong> : End-to-end MVP shipped under intense countdown.
+  2. <strong class="text-cyan">33+ LeetCode Solved</strong>       : Continuous DSA loop (Graphs, DP, Trees).
+  3. <strong class="text-emerald">NexusOS Kernel Simulator</strong>  : Web-based preemptive CPU &amp; virtual memory engine.
+  4. <strong class="text-purple">Aether 3D WebGL Studio</strong>    : 10,000+ interactive particles at steady 60 FPS.
         `,
         dsa: `
 <span class="text-emerald font-bold">[ALGORITHMIC &amp; DSA METRICS]</span>
